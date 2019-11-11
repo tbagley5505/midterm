@@ -7,9 +7,9 @@ def is_even():
    # Create a conditional that sets out to True if the user enters
    # an even integer and False if the user enters an odd integer.
    if user_data%2 == 0 :
-      print('user_data is even')
+      return True
    else :
-      print('user_data is odd')
+      return False
 
    # This is for the test.
    return out 
@@ -22,11 +22,10 @@ def multi_condition():
       print ('Do not be such a zero!')
    elif user_data < 0:
       print('Negative Nelly!') 
-   else:
-      if user_data % 2 == 0:
-         print('Positively odd!')  
-      else:
-         print('Even Steven!')
+   elif user_data %2 == 0:
+      print('Even Steven!')  
+   else : 
+      print('Positively odd!')
     
 
    # Now evaluate the user_data again and have several conditions
@@ -45,7 +44,7 @@ def is_underage():
    # forget to convert the input to an integer.
    is_underage = input('What is your age?')
    is_underage = int(is_underage)
-   print(is_underage)   
+ 
 
 
    # Set up a conditional with four cases
@@ -57,16 +56,14 @@ def is_underage():
    # print "You may drive!"
    # if the age is less than 16, 
    # print "Enjoy your bike, kid!"
-def is_underage(): 
-   is_underage = int(input('What is your age?/n'))
-      if is_underage >= 21
-         print('you may drink, smoke, and drive if you wish!')
-      elif is_underage >= 18
-         print('You may smoke and drive!')
-      elif is_underage >= 16
-         print('you may drive!')
-      else is_underage > 16
-         print('Enjoy your bike and the buss kid!')
+   if is_underage >= 21 :
+      print('you may drink, smoke, and drive if you wish!')
+   elif is_underage >= 18 :
+      print('You may smoke and drive!')
+   elif is_underage >= 16 :
+      print('you may drive!')
+   else :
+      print('Enjoy your bike and the buss kid!')
    # So the tests fail and they don't throw errors
    return None
 

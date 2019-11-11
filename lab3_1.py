@@ -20,7 +20,7 @@ def string_manip(first_name):
    all_caps = name.upper()
    all_lowercase = name.lower()
    first_five_letters = name[:5]
-   last_two_letters = name [-2:]
+   last_two_letters = name[-2:]
    return [all_caps, all_lowercase, first_five_letters, last_two_letters]
 
 def greeter_bot():
@@ -30,8 +30,8 @@ def greeter_bot():
    # I have started it for you, but you need to modify the input and 
    # print functions.
    # Hint: to get the test to pass, the greeting should be "Hello, input name"
-   fname = input('What is your first name?\n')
-   print('Hello, fname')
+   fname = input('What is your first name?')
+   print('Hello' + fname)
 
 def temp_calculator(unit):
 
@@ -39,8 +39,7 @@ def temp_calculator(unit):
    # celsius and prints the equivalent temperature in degrees fahrenheit.
    # The formula is C = (F - 32) * (5/9). 
    unit = input('what is the temperature in degrees celsius that you would like converted to fahrenheit?/n')
-   cel = unit
-   fahr = cel / (5/9) + 32    
+   fahr = unit / (5/9) + 32    
    print(fahr)
 
 
