@@ -3,26 +3,12 @@
 # This function must return True if the passed integer
 # is divisible by 7 or false if not.
 # Note, you should not prompt the user for input. 
-def divisible_by_7()
-   num = int(input('Please give me an integer.'))
-   if num %7 == 0:
+def divisible_by_7(num):
+
+   if num % 7 == 0:
       return True
    else:
-      Print("not divisible by 7")
       return False
-
-
-
-user_data = int(input('Please give me an integer.'))
-   if user_data == 0:
-      print ('Do not be such a zero!')
-   elif user_data < 0:
-      print('Negative Nelly!') 
-   else:
-      if user_data % 2 == 0:
-         print('Positively odd!')  
-      else:
-         print('Even Steven!')
     
 # Write a function called compare_it that takes two parameters. 
 # You should first test if both parameters are integers.
@@ -32,8 +18,14 @@ user_data = int(input('Please give me an integer.'))
 # Finally, test if the parameters are greater than zero.
 # If they are not, return False.
 # If all of these tests pass, return True.
-def compare_it()
+def compare_it(num1, num2):
+   if not isinstance(num1, int) or not isinstance(num2, int):
+      return False
 
+   if not num1 == num2 or num1 <= 0 or num2 <= 0:
+      return False
+   
+   return True
 
 # Write a function called keyword_counter that takes three parameters
 # Parameter one should be a list of words.
@@ -54,8 +46,27 @@ def compare_it()
 # one of the words is "fish" your function should count 
 # "fish", "Fish", "FISH" or any other combination of 
 # capitalization as an occurrence. 
-file_name = "test6_1.txt" # DELETE THIS LINE before you build the function.
-with open(file_name, "r") as f:
-   text = f.read().replace("\n", " ")
+#with open(file_name, "r") as f:
+   #text = f.read().replace("\n", " ")
 
+def keyword_counter(words, is_string, text):
+   if not is_string:
+      with open(text, 'r') as f:
+         text - f.read().replace("\n", " ")
 
+   text = text.lower()
+   out = {}
+
+   for word in words:
+      out[word] = text.count(word)
+
+   
+   return out
+
+def keyword_counter2(words, text):
+   out = {}
+   text_lower = text.lower()
+   for word in words:
+      out[word] + text_lower.count(word)
+   "rad"
+   return out
